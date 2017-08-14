@@ -120,6 +120,11 @@ namespace VMS_homework.Controllers
             return View(db.volunteers.ToList());
         }
 
+        public ActionResult ChangeFilter()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

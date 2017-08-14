@@ -308,6 +308,7 @@
     <Content Include="Views\Main\Index.cshtml" />
     <Content Include="Views\Main\ManageOpp.cshtml" />
     <Content Include="Views\volunteers\ManageVol.cshtml" />
+    <Content Include="Views\volunteers\ChangeFilter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
