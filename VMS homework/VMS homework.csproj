@@ -192,6 +192,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\volunteersController.cs" />
     <Compile Include="Global.asax.cs">
@@ -304,6 +305,9 @@
     <Content Include="Views\volunteers\Details.cshtml" />
     <Content Include="Views\volunteers\Edit.cshtml" />
     <Content Include="Views\volunteers\Index.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\Main\ManageOpp.cshtml" />
+    <Content Include="Views\Main\ManageVol.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
