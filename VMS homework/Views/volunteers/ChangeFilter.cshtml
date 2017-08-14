@@ -5,10 +5,21 @@
 }
 
 <h2>Change Filter</h2>
-
-<p>a.	Approved/Pending Approval (volunteers in both approval statuses are included)</p>
-<p>b.	Approved</p>
-<p>c.	Pending Approval</p>
-<p>d.	Disapproved</p>
-<p>e.	Inactive</p>
-<p>f.	All</p>
+<div>
+@Html.ActionLink("a.	Approved/Pending Approval (volunteers in both approval statuses are included)", "FilterA", "Search")
+</div>
+<div>
+    @Html.ActionLink("b.	Approved", "FilterB", "Search")
+</div>
+<div>
+    @Html.ActionLink("c.	Pending Approval", "FilterC", "Search")
+</div>
+<div>
+    @Html.ActionLink("d.	Disapproved", "FilterD", "Search")
+</div>
+<div>
+    @Html.ActionLink("e.	Inactive", "FilterE", "Search")
+</div>
+<div>
+    @Html.ActionLink("f.	All", "FilterF", "Search")
+</div>

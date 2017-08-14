@@ -1,0 +1,25 @@
+﻿@model IEnumerable<VMS_homework.Models.volunteer>
+@{
+    ViewBag.Title = "FilterA";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>All Approved and Pending Volunteers</h2>
+
+<table>
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>ApprovalStatus</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+            <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+            <td>@Html.DisplayFor(modelItem => item.ApprovalStatus)</td>
+        </tr>
+
+    }
+
+</table>

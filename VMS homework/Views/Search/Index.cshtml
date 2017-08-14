@@ -1,0 +1,29 @@
+﻿@model IEnumerable<VMS_homework.Models.volunteer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Search", FormMethod.Get))
+{
+    @Html.TextBox("searching")
+    <input type="submit" value="submit"/>
+}
+<table>
+    <tr>
+        <th>FirstName</th> <th>LastName</th> <th>ApprovalStatus</th>
+    </tr>
+@foreach (var item in Model)
+{
+<tr>
+    <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+    <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+    <td>@Html.DisplayFor(modelItem => item.ApprovalStatus)</td>
+</tr>
+
+}
+
+</table>
