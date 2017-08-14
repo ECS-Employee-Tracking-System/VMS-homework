@@ -115,6 +115,11 @@ namespace VMS_homework.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult ManageVol()
+        {
+            return View(db.volunteers.ToList());
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

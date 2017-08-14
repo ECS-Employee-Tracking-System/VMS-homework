@@ -14,10 +14,7 @@ namespace VMS_homework.Controllers
             return View();
         }
 
-        public ActionResult ManageVol()
-        {
-            return View();
-        }
+       
         public ActionResult ManageOpp()
         {
             return View();
