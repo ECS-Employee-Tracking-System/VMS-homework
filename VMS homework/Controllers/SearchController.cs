@@ -12,14 +12,14 @@ namespace VMS_homework.Controllers
         VMSEntities db = new VMSEntities();
         // GET: Search
 
-        //for future use to search any other addition status that would be used under approval status
+        //Lets the administrator search for volunteers based on last name
         public ActionResult Index(String searching)
         {
             var status = from s in db.volunteers
                          select s;
             if (!String.IsNullOrEmpty(searching))
             {
-                status = status.Where(s => s.ApprovalStatus.Contains(searching));
+                status = status.Where(s => s.LastName.Contains(searching));
             }
             return View(status.ToList());
 

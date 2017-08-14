@@ -58,8 +58,12 @@
         </tr>
     }
 </table>
-            @Html.ActionLink("a.	Change Volunteer Filter", "ChangeFilter", "volunteers")
-            <p>b.	Search Volunteers</p>
+<div>
+    @Html.ActionLink("a.	Change Volunteer Filter", "ChangeFilter", "volunteers")
+</div>
+<div>
+    @Html.ActionLink("b.	Search Volunteers", "Index", "Search")
+</div>
             <p>c.	View Volunteer Opportunity Matches</p>
             <p>d.	Edit Volunteer</p>
             @Html.ActionLink("e.	Add New Volunteer", "Create", "volunteers")
