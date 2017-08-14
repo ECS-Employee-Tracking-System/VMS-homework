@@ -30,7 +30,7 @@ namespace VMS_homework.Controllers
             var status = from s in db.volunteers
                          select s;
            
-                status = status.Where(s => s.ApprovalStatus.Contains("Approved"));
+                status = status.Where(s => s.ApprovalStatus.Equals("Approved") || s.ApprovalStatus.Equals("Pending"));
             
             return View(status.ToList());
         }
