@@ -1,0 +1,242 @@
+﻿@model VMS_homework.Models.volunteer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>volunteer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Centers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Centers)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Availability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Availability)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZipAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZipAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomePhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CellPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CellPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Education)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Education)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Liscenses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Liscenses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ECFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ECLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ECHomePhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECHomePhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ECCellPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECCellPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ECEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ECStreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECStreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ECCityAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECCityAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ECStateAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECStateAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ECZipcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ECZipcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DLFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DLFile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSFile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApprovalStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApprovalStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserName }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

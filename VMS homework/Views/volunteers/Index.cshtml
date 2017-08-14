@@ -1,0 +1,195 @@
+﻿@model IEnumerable<VMS_homework.Models.volunteer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Centers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Availability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZipAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CellPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Education)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Liscenses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ECFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ECLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ECHomePhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ECCellPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ECEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ECStreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ECCityAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ECStateAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ECZipcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DLFile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SSFile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovalStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Centers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Skills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Availability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZipAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CellPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Education)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Liscenses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ECFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ECLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ECHomePhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ECCellPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ECEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ECStreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ECCityAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ECStateAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ECZipcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DLFile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SSFile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovalStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UserName }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UserName }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UserName })
+        </td>
+    </tr>
+}
+
+</table>
