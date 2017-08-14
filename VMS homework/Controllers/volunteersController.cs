@@ -84,7 +84,7 @@ namespace VMS_homework.Controllers
             {
                 db.Entry(volunteer).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Search");
             }
             return View(volunteer);
         }
