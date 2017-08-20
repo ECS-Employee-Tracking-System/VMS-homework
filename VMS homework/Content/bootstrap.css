@@ -335,15 +335,14 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #333333;
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
-  color: #2a6496;
-  text-decoration: underline;
-}
+    a:hover,
+    a:focus {
+        color: #333333;
+    }
 
 a:focus {
   outline: thin dotted #333;
