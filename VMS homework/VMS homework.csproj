@@ -366,6 +366,8 @@
     <Content Include="Views\OppTables\ManageOpp.cshtml" />
     <Content Include="Views\SearchOpp\Index.cshtml" />
     <Content Include="Views\SearchOpp\MostRecent.cshtml" />
+    <Content Include="Views\OppTables\ChangeFilter.cshtml" />
+    <Content Include="Views\SearchOpp\ByCenter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

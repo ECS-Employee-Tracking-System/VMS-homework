@@ -12,18 +12,19 @@ namespace VMS_homework.Controllers
         OpportunityEntities db = new OpportunityEntities();
         // GET: Search
 
-        //Lets the administrator search for Opportunity by Center
+        //Lets the administrator search for Opportunity by name
         public ActionResult Index(String searching)
         {
             var status = from s in db.OppTables
                          select s;
             if (!String.IsNullOrEmpty(searching))
             {
-                status = status.Where(s => s.OpportunityCenter.Contains(searching));
+                status = status.Where(s => s.Opportunity.Contains(searching));
             }
             return View(status.ToList());
 
         }
+        
         //returns all Opportunities in last 60 days
         public ActionResult MostRecent()
         {
@@ -32,6 +33,18 @@ namespace VMS_homework.Controllers
 
             status = status.Where(s => s.OpportunityStartDate.Equals("Approved"));
 
+            return View(status.ToList());
+        }
+
+        //Lets the administrator search for Opportunity by Center
+        public ActionResult ByCenter(String searching)
+        {
+            var status = from s in db.OppTables
+                         select s;
+            if (!String.IsNullOrEmpty(searching))
+            {
+                status = status.Where(s => s.OpportunityCenter.Contains(searching));
+            }
             return View(status.ToList());
         }
     }
