@@ -194,7 +194,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\OppTablesController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\SearchOppController.cs" />
     <Compile Include="Controllers\volunteersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -202,6 +204,24 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OpportunityModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpportunityModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpportunityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpportunityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpportunityModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OppTable.cs">
+      <DependentUpon>OpportunityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VMSModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -224,6 +244,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Opportunity.mdf" />
+    <Content Include="App_Data\Opportunity_log.ldf">
+      <DependentUpon>Opportunity.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\VMS.mdf" />
     <Content Include="App_Data\VMS_log.ldf">
       <DependentUpon>VMS.mdf</DependentUpon>
@@ -234,6 +258,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\OpportunityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OpportunityModel.edmx</DependentUpon>
+      <LastGenOutput>OpportunityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\OpportunityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OpportunityModel.edmx</DependentUpon>
+      <LastGenOutput>OpportunityModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\VMSModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>VMSModel.edmx</DependentUpon>
@@ -255,6 +289,13 @@
     </EntityDeploy>
     <Content Include="Models\VMSModel.edmx.diagram">
       <DependentUpon>VMSModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\OpportunityModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OpportunityModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\OpportunityModel.edmx.diagram">
+      <DependentUpon>OpportunityModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -307,7 +348,6 @@
     <Content Include="Views\volunteers\Edit.cshtml" />
     <Content Include="Views\volunteers\Index.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Main\ManageOpp.cshtml" />
     <Content Include="Views\volunteers\ManageVol.cshtml" />
     <Content Include="Views\volunteers\ChangeFilter.cshtml" />
     <Content Include="Views\volunteers\FilterA.cshtml" />
@@ -318,6 +358,14 @@
     <Content Include="Views\Search\FilterD.cshtml" />
     <Content Include="Views\Search\FilterE.cshtml" />
     <Content Include="Views\Search\FilterF.cshtml" />
+    <Content Include="Views\OppTables\Create.cshtml" />
+    <Content Include="Views\OppTables\Delete.cshtml" />
+    <Content Include="Views\OppTables\Details.cshtml" />
+    <Content Include="Views\OppTables\Edit.cshtml" />
+    <Content Include="Views\OppTables\Index.cshtml" />
+    <Content Include="Views\OppTables\ManageOpp.cshtml" />
+    <Content Include="Views\SearchOpp\Index.cshtml" />
+    <Content Include="Views\SearchOpp\MostRecent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

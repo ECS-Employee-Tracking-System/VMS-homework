@@ -1,0 +1,63 @@
+﻿@model IEnumerable<VMS_homework.Models.OppTable>
+
+@{
+    ViewBag.Title = "ManageOpp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ManageOpp</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Opportunity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpportunityCenter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpportunityLastComp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpportunityStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpportunityStartDate)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Opportunity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpportunityCenter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpportunityLastComp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpportunityStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpportunityStopDate)
+            </td>
+        </tr>
+    }
+</table>
+<div>
+    @Html.ActionLink("a.	Change Opportunity Filter", "ChangeFilter", "OppTables")
+</div>
+<div>
+    @Html.ActionLink("b.	Search Opportunity", "Index", "SearchOpp")
+</div>
+<p>c.	View Volunteer Opportunity Matches</p>
+<div>
+    @Html.ActionLink("d.	Edit Opportunity", "Index", "SearchOpp")
+</div>
+<div>
+@Html.ActionLink("e.	Add New Opportunity", "Create", "OppTables")
+</div>
+@Html.ActionLink("e.	Delete Opportunity", "Index", "OppTables")
