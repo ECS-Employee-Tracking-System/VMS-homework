@@ -13,6 +13,7 @@ namespace VMS_homework.Controllers
         // GET: Search
 
         //Lets the administrator search for Opportunity by name
+        [Authorize]
         public ActionResult Index(String searching)
         {
             var status = from s in db.OppTables
@@ -24,8 +25,9 @@ namespace VMS_homework.Controllers
             return View(status.ToList());
 
         }
-        
+
         //returns all Opportunities in last 60 days
+        [Authorize]
         public ActionResult MostRecent()
         {
             var status = from s in db.OppTables
@@ -37,6 +39,7 @@ namespace VMS_homework.Controllers
         }
 
         //Lets the administrator search for Opportunity by Center
+        [Authorize]
         public ActionResult ByCenter(String searching)
         {
             var status = from s in db.OppTables

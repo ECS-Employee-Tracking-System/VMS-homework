@@ -21,6 +21,7 @@ namespace VMS_homework.Controllers
         }
 
         // GET: OppTables/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +37,7 @@ namespace VMS_homework.Controllers
         }
 
         // GET: OppTables/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -59,6 +61,7 @@ namespace VMS_homework.Controllers
         }
 
         // GET: OppTables/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,6 +81,7 @@ namespace VMS_homework.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "Id,Opportunity,OpportunityStartDate,OpportunityStopDate,OpportunityLastComp,OpportunityCenter")] OppTable oppTable)
         {
             if (ModelState.IsValid)
@@ -89,7 +93,8 @@ namespace VMS_homework.Controllers
             return View(oppTable);
         }
 
-        // GET: OppTables/Delete/5
+        // GET: OppTables/Delete/
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -107,6 +112,7 @@ namespace VMS_homework.Controllers
         // POST: OppTables/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             OppTable oppTable = db.OppTables.Find(id);
@@ -115,11 +121,13 @@ namespace VMS_homework.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         public ActionResult ManageOpp()
         {
             return View(db.OppTables.ToList());
         }
 
+        [Authorize]
         public ActionResult ChangeFilter()
         {
             return View();

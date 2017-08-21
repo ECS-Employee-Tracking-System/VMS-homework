@@ -13,6 +13,7 @@ namespace VMS_homework.Controllers
         // GET: Search
 
         //Lets the administrator search for volunteers based on last name
+        [Authorize]
         public ActionResult Index(String searching)
         {
             var status = from s in db.volunteers
@@ -25,6 +26,7 @@ namespace VMS_homework.Controllers
 
         }
         //returns all users that have an Approved or pending status
+        [Authorize]
         public ActionResult FilterA()
         {
             var status = from s in db.volunteers
@@ -36,6 +38,7 @@ namespace VMS_homework.Controllers
         }
 
         //returns all users that have an Approved status
+        [Authorize]
         public ActionResult FilterB()
         {
             var status = from s in db.volunteers
@@ -47,6 +50,7 @@ namespace VMS_homework.Controllers
         }
 
         //returns all users that have a Pending Status
+        [Authorize]
         public ActionResult FilterC()
         {
             var status = from s in db.volunteers
@@ -58,6 +62,7 @@ namespace VMS_homework.Controllers
         }
 
         //returns all users that have a Disaprroved Status
+        [Authorize]
         public ActionResult FilterD()
         {
             var status = from s in db.volunteers
@@ -69,6 +74,7 @@ namespace VMS_homework.Controllers
         }
 
         //returns all users that have an inactive status
+        [Authorize]
         public ActionResult FilterE()
         {
             var status = from s in db.volunteers
@@ -79,7 +85,8 @@ namespace VMS_homework.Controllers
             return View(status.ToList());
         }
 
-        //returns all users in the system
+        //returns all users in the syste
+        [Authorize]
         public ActionResult FilterF()
         {
             var status = from s in db.volunteers
