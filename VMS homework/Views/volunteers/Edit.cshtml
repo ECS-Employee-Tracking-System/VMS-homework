@@ -1,6 +1,8 @@
 ﻿@model VMS_homework.Models.volunteer
 
 @{
+
+
     ViewBag.Title = "Edit";
 }
 
@@ -16,6 +18,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
+           
             @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
