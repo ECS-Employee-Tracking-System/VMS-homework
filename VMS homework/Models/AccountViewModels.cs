@@ -49,7 +49,7 @@ namespace VMS_homework.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Username")]
         [EmailAddress]
         public string Email { get; set; }
 
@@ -66,7 +66,7 @@ namespace VMS_homework.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "Username")]
         public string Email { get; set; }
 
         [Required]

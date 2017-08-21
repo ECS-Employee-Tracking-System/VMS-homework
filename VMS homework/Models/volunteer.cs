@@ -11,10 +11,15 @@ namespace VMS_homework.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class volunteer
     {
+        [StringLength(45, MinimumLength = 1)]
+        [Required]
         public string FirstName { get; set; }
+        [StringLength(99, MinimumLength = 1)]
+        [Required]
         public string LastName { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
@@ -42,6 +47,8 @@ namespace VMS_homework.Models
         public string ECZipcode { get; set; }
         public bool DLFile { get; set; }
         public bool SSFile { get; set; }
+        [StringLength(20, MinimumLength = 6)]
+        [Required]
         public string ApprovalStatus { get; set; }
     }
 }
