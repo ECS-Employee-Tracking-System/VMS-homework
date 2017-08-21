@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5bc0b15a991f4a9eb90972cf230fc153" Name="Diagram1">
+      <Diagram DiagramId="72b0837facf4439e8952a39507dbb976" Name="Diagram1">
         <EntityTypeShape EntityType="OpportunityModel.OppTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
