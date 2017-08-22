@@ -226,5 +226,5 @@ Edit failure can occur for mistyped information this can happen after alternativ
 2.	Data on page refreshes to correspond.
 
 General system notes
-System must be designed in an easily-usable manner and must handle errors or wrong inputs appropriately.
+System must be designed in an easily-usable manner and must handle errors or wrong inputs appropriately!
 
