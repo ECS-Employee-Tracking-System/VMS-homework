@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -32,8 +33,9 @@ namespace VMS_homework.Controllers
         {
             var status = from s in db.OppTables
                          select s;
-
-            status = status.Where(s => s.OpportunityStartDate.Equals("Approved"));
+            
+            DateTime time = DateTime.Today.AddDays(-60);
+            status = status.Where(s => (s.OpportunityStartDate.CompareTo(time)) >= 0);
 
             return View(status.ToList());
         }
