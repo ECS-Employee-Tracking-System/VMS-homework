@@ -15,6 +15,7 @@ namespace VMS_homework.Controllers
         private OpportunityEntities db = new OpportunityEntities();
 
         // GET: OppTables
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.OppTables.ToList());
@@ -48,6 +49,7 @@ namespace VMS_homework.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "Id,Opportunity,OpportunityStartDate,OpportunityStopDate,OpportunityLastComp,OpportunityCenter")] OppTable oppTable)
         {
             if (ModelState.IsValid)
@@ -93,7 +95,7 @@ namespace VMS_homework.Controllers
             return View(oppTable);
         }
 
-        // GET: OppTables/Delete/
+        // GET: OppTables/Delete/5
         [Authorize]
         public ActionResult Delete(int? id)
         {
@@ -132,6 +134,7 @@ namespace VMS_homework.Controllers
         {
             return View();
         }
+
 
         protected override void Dispose(bool disposing)
         {

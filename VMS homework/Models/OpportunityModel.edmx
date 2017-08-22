@@ -9,12 +9,12 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="Opportunity" Type="varchar" MaxLength="100" />
-          <Property Name="OpportunityStartDate" Type="varchar" MaxLength="50" />
-          <Property Name="OpportunityStopDate" Type="varchar" MaxLength="50" />
-          <Property Name="OpportunityLastComp" Type="varchar" MaxLength="50" />
-          <Property Name="OpportunityCenter" Type="varchar" MaxLength="100" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Opportunity" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="OpportunityStartDate" Type="date" Nullable="false" />
+          <Property Name="OpportunityStopDate" Type="date" Nullable="false" />
+          <Property Name="OpportunityLastComp" Type="date" Nullable="false" />
+          <Property Name="OpportunityCenter" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityContainer Name="OpportunityModelStoreContainer">
           <EntitySet Name="OppTable" EntityType="Self.OppTable" Schema="dbo" store:Type="Tables" />
@@ -28,12 +28,12 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="Opportunity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="OpportunityStartDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="OpportunityStopDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="OpportunityLastComp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="OpportunityCenter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Opportunity" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OpportunityStartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="OpportunityStopDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="OpportunityLastComp" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="OpportunityCenter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityContainer Name="OpportunityEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="OppTables" EntityType="Self.OppTable" />

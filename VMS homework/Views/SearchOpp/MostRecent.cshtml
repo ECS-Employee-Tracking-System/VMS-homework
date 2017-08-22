@@ -4,9 +4,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>MostRecent</h2>
+<h2>Most Recent</h2>
 
-{
 <table>
     <tr>
         <th>Opportunity</th>
@@ -16,7 +15,7 @@
         <th>Opportunity Last Completed</th>
     </tr>
     @foreach (var item in Model)
-            {
+    {
         <tr>
             <td>@Html.DisplayFor(modelItem => item.Opportunity)</td>
             <td>@Html.DisplayFor(modelItem => item.OpportunityCenter)</td>
@@ -25,9 +24,9 @@
             <td>@Html.DisplayFor(modelItem => item.OpportunityLastComp)</td>
             <td> @Html.ActionLink("Edit", "Edit", "OppTable", new { id = item.Opportunity }, null)</td>
         </tr>
-
-
     }
+
+
 
 </table>
-    }
+    

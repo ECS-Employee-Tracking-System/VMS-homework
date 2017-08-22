@@ -16,9 +16,9 @@ namespace VMS_homework.Models
     {
         public int Id { get; set; }
         public string Opportunity { get; set; }
-        public string OpportunityStartDate { get; set; }
-        public string OpportunityStopDate { get; set; }
-        public string OpportunityLastComp { get; set; }
+        public System.DateTime OpportunityStartDate { get; set; }
+        public System.DateTime OpportunityStopDate { get; set; }
+        public System.DateTime OpportunityLastComp { get; set; }
         public string OpportunityCenter { get; set; }
     }
 }
