@@ -165,7 +165,7 @@ The use case begins when an administrator enters the following user credentials:
 -Username 
 -Password
 
- The system stores this information in the session so that the administrator only can see information appropriate to them. 
+s The system stores this information in the session so that the administrator only can see information appropriate to them. 
 1.2.	System displays administrator page
 System displays a selection of actions to perform. The following actions relevant to this use case are displayed: Manage Opportunities. 
 1.3.	Administrator chooses Manage Opportunities option
@@ -175,7 +175,7 @@ System shows a list of the opportunities along with possible actions the adminis
 
 a.	Change Opportunity Filter
 b.	Search Opportunity
-c.	View Volunteer Opportunity Matches
+Tc.	View Volunteer Opportunity Matches
 d.	Edit Opportunity
 e.	Add New Opportunity
 f.	Delete Opportunity
@@ -228,3 +228,4 @@ Edit failure can occur for mistyped information this can happen after alternativ
 General system notes
 System must be designed in an easily-usable manner and must handle errors or wrong inputs appropriately!
 
+Testing discord
